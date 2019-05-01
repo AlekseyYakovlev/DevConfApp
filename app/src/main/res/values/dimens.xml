@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+<!---->
+    <dimen name="margin_top">32dp</dimen>
+    <dimen name="margin_bottom">32dp</dimen>
+    <dimen name="margin_start">32dp</dimen>
+    <dimen name="margin_end">32dp</dimen>
+
+    <dimen name="margin_top_minor">8dp</dimen>
+    <dimen name="margin_top_minor_double">16dp</dimen>
+    <dimen name="margin_bottom_minor">8dp</dimen>
+    <dimen name="margin_start_minor">8dp</dimen>
+    <dimen name="margin_end_minor">8dp</dimen>
+
+    <dimen name="speaker_avatar_size">160dp</dimen>
+    <dimen name="avatar_margin">8dp</dimen>
+
+    <dimen name="country_ball_size">30dp</dimen>
+    <dimen name="link_pic_size">30dp</dimen>
+
+
+
+</resources>

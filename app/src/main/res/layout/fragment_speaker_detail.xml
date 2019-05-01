@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="model"
+                type="ru.spb.yakovlev.androidacademy.devconfapp.features.speaker_details.SpeakerDetailsFragmentViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#5500CD"
+            tools:context=".SpeakerDetailFragment">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/card_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/card_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/card_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/card_margin">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/speakerInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_rectangle"
+                    android:backgroundTint="#FFFFFF">
+
+                <ImageView
+                        android:id="@+id/speakerAvatar"
+
+                        android:layout_width="@dimen/speaker_avatar_size"
+                        android:layout_height="@dimen/speaker_avatar_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/avatar_margin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/avatar_margin"
+
+                        android:contentDescription="Avatar"
+                        tools:src="@tools:sample/avatars"/>
+
+                <ImageView
+                        android:id="@+id/countryBall"
+                        android:layout_width="@dimen/country_ball_size"
+                        android:layout_height="@dimen/country_ball_size"
+                        app:layout_constraintEnd_toEndOf="@+id/speakerAvatar"
+                        app:layout_constraintBottom_toBottomOf="@+id/speakerAvatar"
+
+                        android:contentDescription="Country"
+                        tools:src="@tools:sample/avatars"/>
+
+                <TextView
+                        android:id="@+id/firstName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toTopOf="@+id/speakerAvatar"
+                        android:layout_marginTop="@dimen/margin_top_minor"
+                        app:layout_constraintStart_toEndOf="@+id/speakerAvatar"
+                        android:layout_marginStart="@dimen/margin_start"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/margin_end"
+
+                        tools:text="@tools:sample/first_names"
+                        style="@style/Header23"/>
+
+                <TextView
+                        android:id="@+id/lastName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toBottomOf="@+id/firstName"
+                        android:layout_marginTop="@dimen/margin_top_minor"
+                        app:layout_constraintStart_toEndOf="@+id/speakerAvatar"
+                        android:layout_marginStart="@dimen/margin_start"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/margin_end"
+
+                        tools:text="@tools:sample/last_names"
+                        style="@style/Header23"/>
+
+                <TextView
+                        android:id="@+id/jobTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toBottomOf="@+id/lastName"
+                        android:layout_marginTop="@dimen/margin_top_minor_double"
+                        app:layout_constraintStart_toEndOf="@+id/speakerAvatar"
+                        android:layout_marginStart="@dimen/margin_start"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/margin_end"
+
+                        tools:text="System Android"
+                        style="@style/MainText.Subheader.Purple"/>
+
+                <TextView
+                        android:id="@+id/city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toBottomOf="@+id/jobTitle"
+                        android:layout_marginTop="@dimen/margin_top_minor"
+                        app:layout_constraintStart_toEndOf="@+id/speakerAvatar"
+                        android:layout_marginStart="@dimen/margin_start"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/margin_end"
+
+                        tools:text="Moscow, Russia"
+                        style="@style/MainText"/>
+
+                <ImageView
+                        android:id="@+id/twitter"
+                        android:layout_width="@dimen/link_pic_size"
+                        android:layout_height="@dimen/link_pic_size"
+
+                        app:layout_constraintTop_toBottomOf="@+id/city"
+                        android:layout_marginTop="@dimen/margin_top_minor_double"
+                        app:layout_constraintStart_toEndOf="@+id/speakerAvatar"
+                        android:layout_marginStart="@dimen/margin_start"
+
+                        tools:src="@tools:sample/avatars"
+                />
+
+                <ImageView
+                        android:id="@+id/github"
+                        android:layout_width="@dimen/link_pic_size"
+                        android:layout_height="@dimen/link_pic_size"
+
+                        app:layout_constraintTop_toBottomOf="@+id/city"
+                        android:layout_marginTop="@dimen/margin_top_minor_double"
+                        app:layout_constraintStart_toEndOf="@+id/twitter"
+                        android:layout_marginStart="@dimen/margin_start_minor"
+
+                        tools:src="@tools:sample/avatars"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                    android:text="TextView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aboutSpeaker"
+
+                    android:paddingTop="@dimen/margin_top"
+                    android:paddingStart="@dimen/margin_start"
+                    android:paddingEnd="@dimen/margin_end"
+                    android:paddingBottom="@dimen/margin_bottom"
+                    tools:text="@tools:sample/lorem"
+                    android:background="#FFFFFF"
+
+
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/talkInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="@dimen/card_margin"
+                    android:paddingBottom="@dimen/margin_bottom"
+                    android:background="#DBE3EC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                        android:id="@+id/talkName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/margin_top"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/margin_start"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/margin_end"
+
+
+                        tools:text="talkName"
+                        style="@style/Header25"/>
+
+                <TextView
+                        android:id="@+id/location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toBottomOf="@id/talkName"
+                        android:layout_marginTop="@dimen/margin_top_minor_double"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/margin_start"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/margin_end"
+
+                        tools:text="location"
+                        style="@style/MainText"/>
+
+                <TextView
+                        android:id="@+id/tag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toBottomOf="@id/location"
+                        android:layout_marginTop="@dimen/margin_top_minor_double"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/margin_start"
+
+                        tools:text="tag"
+                        android:background="@drawable/tag_box"
+                        android:backgroundTint="@color/colorAccent"
+                />
+
+                <TextView
+                        android:id="@+id/talkTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toBottomOf="@id/tag"
+                        android:layout_marginTop="@dimen/margin_top_minor_double"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/margin_start"
+
+                        tools:text="@tools:sample/date/hhmm"
+                        style="@style/Header23"/>
+
+                <TextView
+                        android:id="@+id/talkDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintBottom_toBottomOf="@id/talkTime"
+                        android:layout_marginTop="@dimen/margin_top_minor_double"
+                        app:layout_constraintStart_toEndOf="@id/talkTime"
+                        android:layout_marginStart="@dimen/margin_start_minor"
+
+
+                        tools:text="@tools:sample/date/mmddyy"
+                        style="@style/MainText.Purple"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
