@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/main_graph" app:startDestination="@id/speakersListFragment">
+            android:id="@+id/main_graph"
+            app:startDestination="@id/speakersListFragment">
 
     <fragment android:id="@+id/speakersListFragment"
               android:name="ru.spb.yakovlev.androidacademy.devconfapp.features.speakers_list.SpeakersListFragment"
-              android:label="SpeakersListFragment"/>
+              android:label="SpeakersListFragment">
+        <action android:id="@+id/action_speakersListFragment_to_speakerDetailsFragment"
+                app:destination="@id/speakerDetailsFragment"/>
+        <argument android:name="speakerId"
+                  app:argType="string"/>
+    </fragment>
+    <fragment android:id="@+id/speakerDetailsFragment"
+              android:name="ru.spb.yakovlev.androidacademy.devconfapp.features.speaker_details.SpeakerDetailsFragment"
+              android:label="SpeakerDetailsFragment"/>
 </navigation>

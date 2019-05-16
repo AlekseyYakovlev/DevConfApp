@@ -2,5 +2,8 @@
     <string name="app_name">DevConfApp</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="an_error_happened_please_retry">An error happened, please retry !</string>
+
+
 </resources>

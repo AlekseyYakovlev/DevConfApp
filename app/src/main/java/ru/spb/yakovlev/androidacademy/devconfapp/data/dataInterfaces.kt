@@ -2,18 +2,17 @@ package ru.spb.yakovlev.androidacademy.devconfapp.data
 
 import androidx.lifecycle.LiveData
 import ru.spb.yakovlev.androidacademy.devconfapp.common.Speaker
+import ru.spb.yakovlev.androidacademy.devconfapp.common.Talk
 
 interface Speakers {
-    val speakers: LiveData<List<Speaker>>
-    fun addSpeaker(speaker: Speaker)
-    fun deleteSpeaker(speaker: Speaker)
+    val speakersList: LiveData<List<Speaker>>
     fun reload()
+    fun getSpeakerById(id:String):Speaker?
 }
 
 interface Talks {
-    val talks: LiveData<List<Speaker>>
-    fun addTalk(talk: Talks)
-    fun deleteTalk(talk: Talks)
+    val talks: LiveData<List<Talk>>
     fun reload()
+    fun getTalkBySpeakerId(speakerId:String):Talk?
 }
 

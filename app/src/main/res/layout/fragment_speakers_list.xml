@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="model"
+                type="ru.spb.yakovlev.androidacademy.devconfapp.features.speakers_list.SpeakersViewModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#5500CD">
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/employeeListRV"
+                android:name="ru.spb.yakovlev.androidacademy.testrecyclerviewbinding.features.RecyclerFragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"
+                tools:context=".features.speakers_list.SpeakersListFragment"
+                tools:listitem="@layout/speaker_item"
+                tools:itemCount="19"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
