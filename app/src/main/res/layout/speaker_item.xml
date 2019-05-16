@@ -8,7 +8,7 @@
     <data>
         <variable
                 name="speaker"
-                type="ru.spb.yakovlev.androidacademy.devconfapp.common.Speaker"/>
+                type="ru.spb.yakovlev.androidacademy.devconfapp.common.pojos.Speaker"/>
         <variable name="showLinks"
                   type="String"/>
     </data>

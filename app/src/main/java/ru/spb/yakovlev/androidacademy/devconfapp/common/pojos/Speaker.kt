@@ -1,4 +1,4 @@
-package ru.spb.yakovlev.androidacademy.devconfapp.common
+package ru.spb.yakovlev.androidacademy.devconfapp.common.pojos
 
 
 import com.google.gson.annotations.SerializedName

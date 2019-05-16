@@ -1,7 +1,8 @@
-package ru.spb.yakovlev.androidacademy.devconfapp.common
+package ru.spb.yakovlev.androidacademy.devconfapp.common.pojos
 
 
 import com.google.gson.annotations.SerializedName
+import ru.spb.yakovlev.androidacademy.devconfapp.common.Schedulable
 
 data class FestActivity(
     @SerializedName("title")
