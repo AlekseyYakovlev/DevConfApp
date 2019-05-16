@@ -2,8 +2,8 @@ package ru.spb.yakovlev.androidacademy.devconfapp.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import ru.spb.yakovlev.androidacademy.devconfapp.common.Speaker
-import ru.spb.yakovlev.androidacademy.devconfapp.common.Talk
+import ru.spb.yakovlev.androidacademy.devconfapp.common.pojos.Speaker
+import ru.spb.yakovlev.androidacademy.devconfapp.common.pojos.Talk
 import ru.spb.yakovlev.androidacademy.devconfapp.data.network.NetworkDataProvider
 
 object DataRepo : Speakers, Talks {

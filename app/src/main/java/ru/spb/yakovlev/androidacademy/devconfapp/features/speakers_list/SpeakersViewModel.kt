@@ -3,7 +3,7 @@ package ru.spb.yakovlev.androidacademy.devconfapp.features.speakers_list
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import ru.spb.yakovlev.androidacademy.devconfapp.common.Speaker
+import ru.spb.yakovlev.androidacademy.devconfapp.common.pojos.Speaker
 import ru.spb.yakovlev.androidacademy.devconfapp.data.DataRepo
 import ru.spb.yakovlev.androidacademy.testrecyclerviewbinding.utils.toast
 

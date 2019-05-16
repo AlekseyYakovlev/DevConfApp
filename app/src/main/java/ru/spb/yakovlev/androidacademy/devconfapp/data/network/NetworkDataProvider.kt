@@ -6,15 +6,15 @@ import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import ru.spb.yakovlev.androidacademy.devconfapp.common.DevFest
+import ru.spb.yakovlev.androidacademy.devconfapp.common.pojos.DevFest
 
 object NetworkDataProvider {
-    private val service by lazy { ApiFactory.devFestApi }
+    private val service = ApiFactory.devFestApi
     private val _devFestData by lazy { MutableLiveData<DevFest>() }
-    val devFestData = _devFestData as LiveData<DevFest>
+    val devFestData:LiveData<DevFest> = _devFestData
 
     fun updateDevData(){
-        GlobalScope.launch(Dispatchers.IO)
+        GlobalScope.launch(Dispatchers.Main)
         {
             val postRequest = service.fetchDevFestData() // Making Network call
             try {

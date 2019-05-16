@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import ru.spb.yakovlev.androidacademy.devconfapp.common.Speaker
+import ru.spb.yakovlev.androidacademy.devconfapp.common.pojos.Speaker
 import ru.spb.yakovlev.androidacademy.devconfapp.databinding.SpeakerItemBinding
 import ru.spb.yakovlev.androidacademy.devconfapp.features.speakers_list.SpeakersViewModel
 

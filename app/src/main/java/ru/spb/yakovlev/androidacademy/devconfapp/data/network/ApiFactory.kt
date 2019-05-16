@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiFactory {
-    fun retrofit(): Retrofit = Retrofit.Builder()
+    private fun retrofit(): Retrofit = Retrofit.Builder()
         //.client(OkHttpClient().newBuilder().build())
         .baseUrl("https://storage.yandexcloud.net/devfestapi/")
         .addConverterFactory(GsonConverterFactory.create())
