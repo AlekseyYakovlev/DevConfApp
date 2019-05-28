@@ -10,10 +10,10 @@ object DataRepo : Speakers, Talks {
     private val netDP = NetworkDataProvider
 
     override val speakersList: LiveData<List<Speaker>>
-        get() = Transformations.map(netDP.devFestData) { it.speakers }
+        get() = Transformations.map(netDP.devFestDataFromNet) { it.speakers }
 
     override val talks: LiveData<List<Talk>>
-        get() = Transformations.map(netDP.devFestData) { it.schedule.talks }
+        get() = Transformations.map(netDP.devFestDataFromNet) { it.schedule.talks }
 
     override fun getSpeakerById(id: String): Speaker? =
         speakersList.value?.find { it.id == id }
@@ -22,7 +22,7 @@ object DataRepo : Speakers, Talks {
         talks.value?.find { it.speaker == speakerId }
 
     override fun reload() {
-        netDP.updateDevData()
+        netDP.updateDevDataFromNet()
     }
 
 }

@@ -10,17 +10,17 @@ import ru.spb.yakovlev.androidacademy.devconfapp.common.pojos.DevFest
 
 object NetworkDataProvider {
     private val service = ApiFactory.devFestApi
-    private val _devFestData by lazy { MutableLiveData<DevFest>() }
-    val devFestData:LiveData<DevFest> = _devFestData
+    private val _devFestDataFromNet = MutableLiveData<DevFest>()
+    val devFestDataFromNet:LiveData<DevFest> = _devFestDataFromNet
 
-    fun updateDevData(){
+    fun updateDevDataFromNet(){
         GlobalScope.launch(Dispatchers.Main)
         {
-            val postRequest = service.fetchDevFestData() // Making Network call
+            val postRequest = service.fetchDevFestDataAsync() // Making Network call
             try {
                 val response = postRequest.await()
                 if (response.isSuccessful) {
-                    _devFestData.postValue(response.body())
+                    _devFestDataFromNet.postValue(response.body())
                 } else {
                     Log.d("NetworkDataProvider ", response.errorBody().toString())
                 }

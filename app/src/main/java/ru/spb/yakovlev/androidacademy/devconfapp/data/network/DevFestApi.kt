@@ -7,5 +7,5 @@ import ru.spb.yakovlev.androidacademy.devconfapp.common.pojos.DevFest
 
 interface DevFestApi {
     @GET("data.json")
-    fun fetchDevFestData(): Deferred<Response<DevFest>>
+    fun fetchDevFestDataAsync(): Deferred<Response<DevFest>>
 }

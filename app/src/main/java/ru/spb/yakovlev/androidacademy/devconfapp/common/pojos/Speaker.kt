@@ -1,9 +1,13 @@
 package ru.spb.yakovlev.androidacademy.devconfapp.common.pojos
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class Speaker(
+    @PrimaryKey
     @SerializedName("id")
     val id: String,
     @SerializedName("firstName")
